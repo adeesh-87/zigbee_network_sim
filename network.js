@@ -10,7 +10,8 @@ class ZNet {
 		var i;
 		for (i = 1; i <= this.depth; i++) {
 			size += this.max_children * (Math.pow(this.max_routers, (i-1)));
-		} 
+		}
+		if (size > 65536) size = -1;
 		return size;
 	}
 }
